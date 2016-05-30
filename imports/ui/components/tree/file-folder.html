@@ -1,0 +1,66 @@
+<!--//import iron icons-->
+<link rel="import" href="../../bower_components/iron-icons/iron-icons.html">
+<dom-module id="file-folder">
+
+  <style>
+    :host.selected > .thisFolder > .folderTitle{
+      background-color: rgba(31, 141, 214, 0.4);
+      border: 1px solid rgba(31, 141, 214, 0.7);
+      border-radius: 5px;
+    }
+
+    .parent.collapsed:before {
+      content: '+ ';
+      padding: 5px;
+    }
+
+    .parent.expanded:before {
+      content: '- ';
+      padding: 5px;
+    }
+
+    .parent, .name {
+      cursor: pointer;
+    }
+
+    ul {
+      margin: 0;
+    }
+
+    li {
+      list-style-type: none;
+    }
+
+    iron-icon {
+      cursor: pointer;
+      width: 24px;
+      height: 24px;
+    }
+
+    [hidden] {
+      display: none;
+    }
+  </style>
+
+  <template>
+    <div class="thisFolder">
+      <div class="folderTitle">
+        <span class$="{{_determineClass(data.open, data.children)}}" on-click="toggleChildren">
+          <iron-icon icon$="{{_determineIcon(data.folder)}}"></iron-icon>
+        </span>
+        <span class="name" on-click="selectFolder">{{data.name}}</span>
+      </div>
+      <ul hidden$={{!data.open}}>
+        <template is="dom-repeat" items="{{data.children}}">
+          <li>
+            <file-folder data="{{item}}"></file-folder>
+          </li>
+        </template>
+      </ul>
+    </div>
+  </template>
+
+</dom-module>
+
+
+<script src="file-folder.js"></script>

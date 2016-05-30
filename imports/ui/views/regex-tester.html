@@ -1,0 +1,37 @@
+<dom-module id="regex-tester">
+  <template>
+    <style>
+.regex{
+  border:2px solid #dadada;
+  font-size:22px;
+  padding:5px;
+  margin:10px;    
+  background:white;
+}
+.regex:focus{
+  outline:none;
+  border-color:#9ecaed;
+  box-shadow:0 0 10px #9ecaed;
+}
+.subject{
+  border:2px solid #dadada;
+  padding:5px;
+  margin:10px;         
+  font-size:18px;
+  background:white;
+}
+.match{
+  background:var(--paper-blue-a400);
+  padding:2px;
+  font-size:18px;
+  color:white;
+}
+    </style>
+    <div class="work-area flex vertical layout">
+      <content-editable id="regex" pre-text="[[regex]]" contenteditable class="regex" on-edited="colorize">
+      </content-editable>
+      <div id="subject" class="subject flex"><div>{{subject}}</div></div>
+    </div>
+  </template>
+</dom-module>
+<script src="regex-tester.js"></script>

@@ -1,0 +1,24 @@
+<dom-module id="main-layout">
+  <template>
+    <style>
+.main{
+  background:#eee;
+}
+.title{
+  @apply(--paper-font-title);
+  color:#666;
+
+}
+.sidebar{
+  width:300px;
+}
+    </style>
+    <div class="fit layout main horizontal">
+      <div class="sidebar">
+        <file-tree data="{{files}}"></file-tree>
+      </div>
+      <regex-tester class="flex layout vertical"></regex-tester>
+    </div>
+  </template>
+</dom-module>
+<script src="main-layout.js"></script>
