@@ -1,5 +1,5 @@
 # regex-tester
-Duplicated from https://github.com/aruntk/regex-tester
+
 
 
 ####Installation
