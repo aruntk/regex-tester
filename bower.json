@@ -5,7 +5,6 @@
     "polymer": "Polymer/polymer#^1.0.0",
     "paper-toolbar": "^1.1.4",
     "paper-header-panel": "^1.1.6",
-    "file-tree": "winhowes-file-tree#^1.0.3",
     "iron-icons": "^1.1.3"
   },
   "name": "synthesis-demo",
