@@ -1,6 +1,6 @@
-class mainHeader extends Polymer.Class(
+class rtMainHeader extends Polymer.Class(
   {
-    is: "main-header",
+    is: "rt-main-header",
     behaviors:[mwcMixin],
     properties:{
       status:{
@@ -21,4 +21,4 @@ class mainHeader extends Polymer.Class(
   }
 };
 
-document.registerElement(mainHeader.prototype.is, mainHeader);
+document.registerElement(rtMainHeader.prototype.is, rtMainHeader);

@@ -1,4 +1,4 @@
-<dom-module id="main-layout">
+<dom-module id="rt-main-layout">
   <template>
     <style>
 .main{
@@ -17,7 +17,7 @@
       <div class="sidebar">
         <file-tree data="{{files}}"></file-tree>
       </div>
-      <regex-tester class="flex layout vertical"></regex-tester>
+      <regex-tester sel-content="{{selContent}}" class="flex layout vertical"></regex-tester>
     </div>
   </template>
 </dom-module>
